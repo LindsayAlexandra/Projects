@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Island Resort</title>
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      3000);
+});
+</script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<header><img src="assets/header.png" width="643" height="67" alt=""/></header>
+<ul id="nav">
+<li><a href="#">Home</a></li>
+<li><a href="rooms.html">Rooms & Suites</a></li>
+<li><a href="amenities.html">Amenities</a></li>
+<li><a href="weddings.html">Weddings & Honeymoons</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+
+<div id="content">
+<h4>About the Resort</h4>
+<p>Lorem ipsum dolor sit amet, consectetur ipiscing elit. Vivamus condimentum elit arcu. Cras condimentum gravida nibh a semper. Quisque malesuada felis vitae lorem commodo consequat. Sed tincidunt, velit non iaculis laoreet, augue eros sagittis nisl, sit amet aliquam quam sapien at enim. Nulla semper iaculis elit. Nullam eget lorem molestie, molestie leo at, adipiscing purus. Donec ut nulla sodales urna iaculis vestibulum accumsan id odio.<br>
+<br>
+Integer eget nulla aliquet, ornare magna vitae, vestibulum tellus. Integer laoreet at justo in consectetur. Vestibulum egestas adipiscing posuere. Phasellus sodales suscipit odio hendrerit varius. Sed sollicitudin nisl ac arcu consectetur, bibendum lacinia lacus suscipit. Nullam congue leo nec leo cursus semper. Curabitur posuere eleifend felis, vitae porttitor risus aliquet sit amet. Nullam in fermentum lorem. Quisque et metus dui. Quisque bibendum lorem sed varius molestie. </p>
+</div>
+
+
+<div id="rightcol">
+
+<div class="fadein">
+  <img src="assets/food2.jpg" width="350" height="350" alt=""/>
+  <img src="assets/room2.jpg" width="350" height="350" alt=""/>
+  <img src="assets/weddingcake2.jpg" width="350" height="350" alt=""/>
+  <img src="assets/beach2.jpg" width="350" height="350" alt=""/>
+</div>
+
+</div>
+<footer>Copyright &copy; 2014 Lindsay Alexandra Dealy <a href="mailto:mail@portlandweb.org">E-Mail: Lindsay</a></footer>
+</div>
+</body>
+</html>

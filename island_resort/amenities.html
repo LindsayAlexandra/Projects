@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Island Resort</title>
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    $active.addClass('last-active');
+        
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+
+<header><img src="assets/header.png" width="643" height="67" alt=""/></header>
+<ul id="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="rooms.html">Rooms & Suites</a></li>
+<li><a href="#">Amenities</a></li>
+<li><a href="weddings.html">Weddings & Honeymoons</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+
+<div id="content">
+<h4>All the activities that you could imagine at a family resort!</h4>
+<ul>
+<li>Weddings</li>
+<li>Travel Tours</li>
+<li>Sunny Beaches</li>
+<li>And So Much More!</li>
+</ul>
+</div>
+
+
+<div id="slideshow">
+<img src="assets/weddingcake2.jpg" width="350" height="350" alt="" class="active"/>
+<img src="assets/traveltour2.jpg" width="350" height="350" alt=""/>
+<img src="assets/room2.jpg" width="350" height="350" alt=""/>
+<img src="assets/flower.jpg" width="350" height="350" alt=""/>
+</div>
+<footer>Copyright &copy; 2014 Lindsay Alexandra Dealy <a href="mailto:mail@portlandweb.org">E-Mail: Lindsay</a></footer>
+</div>
+</body>
+</html>
